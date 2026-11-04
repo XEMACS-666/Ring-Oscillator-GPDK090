@@ -1,0 +1,11 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'inverter layout Jamar':
+  info: Assign pin label "gnd" at (1.4550, 0.0600) to layer `Metal1_p'.
+  info: Assign pin label "vin" at (0.0600, 1.4650) to layer `Metal1_p'.
+  info: Assign pin label "vout" at (2.8500, 1.4650) to layer `Metal1_p'.
+  info: Assign pin label "vdd" at (1.4550, 2.8700) to layer `Metal1_p'.
+
+***** End of Label Report *****
+

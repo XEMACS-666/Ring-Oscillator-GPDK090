@@ -1,0 +1,84 @@
+*
+*
+*
+*                       LINUX           Wed Jun 17 12:45:56 2026
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  Name           : advgen - Quantus - (64-bit)
+*  Version        : 21.2.2-p045
+*  Build Date     : Fri Sep 23 10:27:37 PDT 2022
+*
+*  HSPICE LIBRARY
+*
+*!LENGTH_UNITS METERS
+*
+*
+*
+
+*
+.SUBCKT inverter vdd gnd vin vout
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MavD1_1	vout#2	vin#4	gnd#4	gnd#2	nmos1v#20ivpcell#20gpdk090	L=1e-07
++ W=1.2e-07
++ AD=6.96e-14	AS=6.96e-14	PD=1.16e-06	PS=1.16e-06
++ simW=1.2e-07 fw=1.2e-07
+MavD7_1	vout#5	vin#1	vdd#4	vdd	pmos1v#20ivpcell#20gpdk090	L=1e-07
++ W=1.2e-07
++ AD=6.96e-14	AS=6.96e-14	PD=1.16e-06	PS=1.16e-06
++ simW=1.2e-07 fw=1.2e-07
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Ri1	vin	vin#3	10.483653	$mt1	$W=1.2e-07
++ $X=0.3945 $Y=1.465
+Ri2	vout	vout#1	0.727273	$mt1	$W=1.2e-07
++ $X=2.2805 $Y=1.465
+Ri3	vout#1	vout#3	0.380271	$mt1	$W=1.2e-07
++ $X=1.71 $Y=1.2075
+Ri5	vout#1	vout#6	0.386938	$mt1	$W=1.2e-07
++ $X=1.71 $Y=1.7275
+Ri7	vout#2	vout#3	15.000000	$mt1	$W=1.2e-07	$X=1.71 $Y=0.89
+Ri8	vout#5	vout#6	15.000000	$mt1	$W=1.2e-07	$X=1.71 $Y=2.05
+Ri9	vdd	vdd#1	0.235576	$mt1	$W=1.2e-07	$X=1.17 $Y=2.69
+Ri11	vdd#1	vdd#5	0.302243	$mt1	$W=1.2e-07	$X=1.17 $Y=2.31
+Ri14	vdd#4	vdd#5	15.000000	$mt1	$W=1.2e-07	$X=1.17 $Y=2.05
+Ri15	gnd	gnd#1	0.242243	$mt1	$W=1.2e-07
++ $X=1.17 $Y=0.245
+Ri17	gnd#1	gnd#5	0.302243	$mt1	$W=1.2e-07	$X=1.17 $Y=0.63
+Ri19	gnd#2	gnd#1	5.000000	$mt1	$W=1.2e-07	$X=1.44 $Y=0.43
+Ri20	gnd#4	gnd#5	15.000000	$mt1	$W=1.2e-07	$X=1.17 $Y=0.89
+Rj1	vin#1	vin#2	52.617229	$poly	$W=1e-07
++ $X=1.44 $Y=1.7505
+Rj2	vin#2	vin#3	53.452606	$poly	$W=1e-07	$X=1.15 $Y=1.46
+Rj3	vin#2	vin#4	50.617226	$poly	$W=1e-07	$X=1.44 $Y=1.18
+*
+*       CAPACITOR CARDS
+*
+*
+C1	vdd	gnd	cmodel	2.59709e-16	$X=1.985 $Y=0.7085
+C2	vin	gnd	cmodel	4.66729e-17	$X=0.4115 $Y=1.303
+C3	vout	gnd	cmodel	6.3385e-17	$X=2.5045 $Y=1.223
+C4	vin#1	gnd	cmodel	5.64839e-17	$X=1.5205 $Y=1.767
+C5	vin#4	gnd	cmodel	5.5643e-17	$X=1.5195 $Y=0.8055
+C6	vin#3	gnd	cmodel	9.56673e-17	$X=1.122 $Y=1.084
+C7	vdd#1	gnd	cmodel	2.03531e-17	$X=1.754 $Y=1.379
+C8	vout#1	gnd	cmodel	7.12776e-17	$X=1.8005 $Y=1.1105
+C9	vout#3	gnd	cmodel	4.92234e-17	$X=1.7545 $Y=0.8705
+C10	vout#6	gnd	cmodel	4.95516e-17	$X=1.755 $Y=1.7075
+C11	vdd#5	gnd	cmodel	2.68423e-17	$X=1.2695 $Y=1.89
+C12	vin#2	gnd	cmodel	6.18782e-17	$X=1.555 $Y=1.207
+*
+*
+.ENDS inverter
+*
